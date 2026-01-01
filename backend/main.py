@@ -57,7 +57,7 @@ def get_db():
 def generate_ai_review(diff: str, branch: str):
     """Sends code diff to Gemini API for review based on branch context."""
     genai.configure(api_key=GEMINI_API_KEY)
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-pro')
     
     context = "General code review."
     if branch.startswith("feature/"):
